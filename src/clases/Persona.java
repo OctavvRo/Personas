@@ -1,17 +1,15 @@
 
 package clases;
 
+import java.util.Scanner;
+
 public class Persona {
    
     private String nombre;
     private String genero;
     private int edad;
 
-    public Persona(String nombre, String genero, int edad) {
-        this.nombre = nombre;
-        this.genero = genero;
-        this.edad = edad;
-    }
+    Scanner e =new Scanner(System.in);
 
     public String getNombre() {
         return nombre;
@@ -25,16 +23,14 @@ public class Persona {
         return edad;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void modificarAtributos(){
+        
+        System.out.println("Ingresa el nombre de la persona: ");
+        this.nombre = e.nextLine();
+        System.out.println("Ingresa el género de la persona: ");
+        this.genero = e.nextLine();
+        System.out.println("Ingresa la edad de la persona: ");
+        this.edad = e.nextInt();
     }
       
 }
